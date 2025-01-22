@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+
+/* O * faz com que a parametrização seja na página inteira, nesse caso, inicialmente foi retirado os valores de margem e distância entre as bordas, respectivamente. */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    padding: 2% 0 0 10% ;
+}
+
+.menu{
+    display: flex;
+    gap: 40px;
+}
+
+.menu_link{
+    font-size: 1,5rem;
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+body{
+   /* height: 100vh;   O vh está relacionado ao viewport (a área visível da página da web)*/
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao{
+    padding: 3% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-principal);
+    
+}
+
+.paragrafo{
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.links_subtitulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: #F6F6F6;
+}
+
+/* estiliza a tag ou classe conforme for parametrizado */
+.botoes:hover{
+    background-color: var(--cor-hover);
+
+}
+
+.link_certificados{
+        text-decoration: none;
+        color: var(--cor-terciaria);
+}
+
+.imagem{
+    width: 40%;
+}
+
+.rodape{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    text-align: center;
+    padding: 24px; 
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+    .menu{
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 2%;
+    }
+
+    .conteudo{
+        width: auto;
+    }
+}
+
